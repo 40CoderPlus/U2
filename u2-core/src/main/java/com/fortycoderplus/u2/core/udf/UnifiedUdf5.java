@@ -18,7 +18,9 @@
  * limitations under the License.
  */
 
-package com.fortycoderplus.u2.core;
+package com.fortycoderplus.u2.core.udf;
+
+import com.fortycoderplus.u2.core.UnifiedUdf;
 
 public interface UnifiedUdf5<P1, P2, P3, P4, P5, R> extends UnifiedUdf {
 

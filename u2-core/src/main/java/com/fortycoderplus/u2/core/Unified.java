@@ -20,12 +20,24 @@
 
 package com.fortycoderplus.u2.core;
 
-public interface UnifiedUdf6<P1, P2, P3, P4, P5, P6, R> extends UnifiedUdf {
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-    R call(P1 p1, P2 p2, P3 p3, P4 p4, P5 p5, P6 p6);
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Unified {
 
-    @Override
-    default int numOfParameters() {
-        return 6;
-    }
+    Kind kind() default Kind.SCALAR;
+
+    Category[] categories() default {};
+
+    Engine[] runOn() default {Engine.Doris, Engine.Flink, Engine.Hive, Engine.Spark, Engine.Trino};
+
+    String name();
+
+    String description() default "";
+
+    String version() default "1.0.0";
 }

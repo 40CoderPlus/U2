@@ -18,9 +18,16 @@
  * limitations under the License.
  */
 
-package com.fortycoderplus.u2.core;
+package com.fortycoderplus.u2.core.udf;
 
-public interface UnifiedUdf {
+import com.fortycoderplus.u2.core.UnifiedUdf;
 
-    int numOfParameters();
+public interface UnifiedUdf3<P1, P2, P3, R> extends UnifiedUdf {
+
+    R call(P1 p1, P2 p2, P3 p3);
+
+    @Override
+    default int numOfParameters() {
+        return 3;
+    }
 }

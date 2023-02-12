@@ -20,22 +20,11 @@
 
 package com.fortycoderplus.u2.functions;
 
-import com.fortycoderplus.u2.core.Category;
-import com.fortycoderplus.u2.core.Kind;
-import com.fortycoderplus.u2.core.UnifiedUdf0;
-import java.util.Set;
+import com.fortycoderplus.u2.core.Unified;
+import com.fortycoderplus.u2.core.udf.UnifiedUdf0;
 
+@Unified(name = "U2")
 public interface U2 extends UnifiedUdf0<String> {
-
-    @Override
-    default Kind kind() {
-        return Kind.SCALAR;
-    }
-
-    @Override
-    default Set<Category> categories() {
-        return Set.of(Category.MISC);
-    }
 
     @Override
     default String call() {

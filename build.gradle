@@ -37,18 +37,28 @@ subprojects {
     }
 
     dependencies {
+        // lombok
+        compileOnly "org.projectlombok:lombok:1.18.24"
+        annotationProcessor "org.projectlombok:lombok:1.18.24"
+        // mapstruct
+        implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+        annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+
         // test:junit
         testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
         testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
     }
 
-    plugins.withType(JavaPlugin) {
+    plugins.withType(JavaPlugin).configureEach {
         project.sourceCompatibility = JavaVersion.VERSION_11
     }
-    tasks.withType(JavaCompile) {
+    tasks.withType(JavaCompile).configureEach {
         options.encoding = "UTF-8"
     }
 
+    java {
+        withSourcesJar()
+    }
     test {
         useJUnitPlatform()
     }

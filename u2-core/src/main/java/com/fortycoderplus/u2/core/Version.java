@@ -20,5 +20,12 @@
 
 package com.fortycoderplus.u2.core;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class Version {
+
+    String ver;
 }
