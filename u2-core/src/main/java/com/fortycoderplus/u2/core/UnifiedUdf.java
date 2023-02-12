@@ -20,7 +20,4 @@
 
 package com.fortycoderplus.u2.core;
 
-public interface UnifiedUdf {
-
-    int numOfParameters();
-}
+public interface UnifiedUdf {}

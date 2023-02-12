@@ -18,11 +18,11 @@
  * limitations under the License.
  */
 
-package com.fortycoderplus.u2.core.udf;
+package com.fortycoderplus.u2.core;
 
-import com.fortycoderplus.u2.core.UnifiedUdf;
+public interface UnifiedUdfCreator {
 
-public interface UnifiedUdf2<P1, P2, R> extends UnifiedUdf {
+    String create(UnifiedUdf udf, Engine engine);
 
-    R call(P1 p1, P2 p2);
+    String create(UnifiedUdf udf, Engine engine, String identifier);
 }

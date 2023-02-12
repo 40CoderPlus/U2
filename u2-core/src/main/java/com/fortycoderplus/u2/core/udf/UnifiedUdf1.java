@@ -25,9 +25,4 @@ import com.fortycoderplus.u2.core.UnifiedUdf;
 public interface UnifiedUdf1<P1, R> extends UnifiedUdf {
 
     R call(P1 p1);
-
-    @Override
-    default int numOfParameters() {
-        return 1;
-    }
 }

@@ -1,3 +1,4 @@
 rootProject.name = 'U2'
-include('u2-core')
-include('u2-functions')
+include 'u2-core'
+include 'u2-functions'
+include 'u2-processor'
