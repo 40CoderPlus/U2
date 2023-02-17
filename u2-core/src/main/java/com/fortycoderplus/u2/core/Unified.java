@@ -31,13 +31,13 @@ public @interface Unified {
 
     Kind kind() default Kind.SCALAR;
 
-    Category[] categories() default {};
+    Category[] categories();
 
     Engine[] runOn() default {Engine.Doris, Engine.Flink, Engine.Hive, Engine.Spark, Engine.Trino};
 
     String name();
 
-    String description() default "";
+    String description();
 
     String version() default "1.0.0";
 }

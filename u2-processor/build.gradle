@@ -1,3 +1,9 @@
 dependencies {
     implementation project(":u2-core")
+    implementation project(":u2-functions")
+
+    implementation 'com.github.spullara.mustache.java:compiler:0.9.10'
+
+    // compile dependencies of hive/flink/trino
+    compileOnly 'org.apache.flink:flink-table-common:1.16.0'
 }

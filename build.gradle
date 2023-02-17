@@ -49,10 +49,10 @@ subprojects {
         testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
     }
 
-    plugins.withType(JavaPlugin).configureEach {
+    plugins.withType(JavaPlugin) {
         project.sourceCompatibility = JavaVersion.VERSION_11
     }
-    tasks.withType(JavaCompile).configureEach {
+    tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
     }
 
