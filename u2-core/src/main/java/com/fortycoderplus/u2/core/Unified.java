@@ -29,11 +29,11 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Unified {
 
-    Kind kind() default Kind.SCALAR;
+    UnifiedUdfKind kind() default UnifiedUdfKind.SCALAR;
 
-    Category[] categories();
+    UnifiedUdfCategory[] categories();
 
-    Engine[] runOn() default {Engine.Doris, Engine.Flink, Engine.Hive, Engine.Spark, Engine.Trino};
+    UnifiedUdfEngine[] runOn() default {UnifiedUdfEngine.Doris, UnifiedUdfEngine.Flink, UnifiedUdfEngine.Hive, UnifiedUdfEngine.Spark, UnifiedUdfEngine.Trino};
 
     String name();
 

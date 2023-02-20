@@ -20,7 +20,7 @@
 
 package com.fortycoderplus.u2.core;
 
-public enum Engine {
+public enum UnifiedUdfEngine {
     Hive,
 
     Flink,

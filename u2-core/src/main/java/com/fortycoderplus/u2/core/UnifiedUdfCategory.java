@@ -20,7 +20,7 @@
 
 package com.fortycoderplus.u2.core;
 
-public enum Category {
+public enum UnifiedUdfCategory {
 
     // type category
     NUMBER("for number"),
@@ -37,7 +37,7 @@ public enum Category {
 
     final String description;
 
-    Category(String description) {
+    UnifiedUdfCategory(String description) {
         this.description = description;
     }
 }

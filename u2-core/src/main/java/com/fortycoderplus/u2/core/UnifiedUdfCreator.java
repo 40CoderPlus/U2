@@ -22,7 +22,7 @@ package com.fortycoderplus.u2.core;
 
 public interface UnifiedUdfCreator {
 
-    String create(UnifiedUdf udf, Engine engine);
+    String create(UnifiedUdf udf, UnifiedUdfEngine engine);
 
-    String create(UnifiedUdf udf, Engine engine, String identifier);
+    String create(UnifiedUdf udf, UnifiedUdfEngine engine, String identifier);
 }

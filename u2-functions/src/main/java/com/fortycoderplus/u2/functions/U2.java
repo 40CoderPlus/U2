@@ -20,11 +20,11 @@
 
 package com.fortycoderplus.u2.functions;
 
-import com.fortycoderplus.u2.core.Category;
+import com.fortycoderplus.u2.core.UnifiedUdfCategory;
 import com.fortycoderplus.u2.core.Unified;
 import com.fortycoderplus.u2.core.udf.UnifiedUdf0;
 
-@Unified(name = "U2", description = "U2 Sample Function", categories = Category.MISC)
+@Unified(name = "U2", description = "U2 Sample Function", categories = UnifiedUdfCategory.MISC)
 public interface U2 extends UnifiedUdf0<String> {
 
     @Override

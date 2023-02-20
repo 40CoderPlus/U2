@@ -20,7 +20,7 @@
 
 package com.fortycoderplus.u2.core;
 
-public enum Kind {
+public enum UnifiedUdfKind {
     SCALAR,
 
     AGGREGATE,
